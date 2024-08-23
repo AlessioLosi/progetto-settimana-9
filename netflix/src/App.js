@@ -8,25 +8,27 @@ import { Container } from 'react-bootstrap';
 import { Row} from 'react-bootstrap';
 import { Col } from 'react-bootstrap';
 import Movies2 from './components/MovieList3';
+import Footercustom from './components/Footer';
 
 
 function App() {
   return (
-    <div className="App">
+    <div className="App bg-dark">
       <header>
         <CustomNavbar/>
       </header>
       <main>
-        <Container >
+        <Container className='text-start mt-4 text-white' >
           <Movies/>
         </Container>
-        <Container>
+        <Container className='text-start text-white mt-3'>
           <Movies1/>
         </Container>
-        <Container>
+        <Container className='text-start text-white mt-3'>
           <Movies2/>
         </Container>
       </main>
+      <Footercustom/>
     </div>
   );
 }

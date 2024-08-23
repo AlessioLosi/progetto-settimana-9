@@ -44,6 +44,7 @@ class Movies1 extends Component {
 
     return (
         <div>
+        
         <Carousel>
           {movieGroups.map((group, index) => (
             <Carousel.Item key={index}>

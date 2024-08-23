@@ -44,6 +44,7 @@ class Movies2 extends Component {
 
     return (
         <div>
+            <h2>Star Wars</h2>
         <Carousel>
           {movieGroups.map((group, index) => (
             <Carousel.Item key={index}>

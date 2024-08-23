@@ -44,6 +44,7 @@ class Movies extends Component {
 
     return (
         <div>
+            <h2>Il Signore Degli Anelli</h2>
         <Carousel>
           {movieGroups.map((group, index) => (
             <Carousel.Item key={index}>
