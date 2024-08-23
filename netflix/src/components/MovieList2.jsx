@@ -5,13 +5,13 @@ import { Col } from 'react-bootstrap';
 
 
 
-class Movies extends Component {
+class Movies1 extends Component {
   state = {
-    remoteMovies: [],
+    remoteMovies1: [],
   };
 
   fetchMovie = () => {
-    fetch('http://www.omdbapi.com/?apikey=6a9548b4&s=Lord Of Rings')
+    fetch('http://www.omdbapi.com/?apikey=6a9548b4&s=Marvel')
       .then((response) => {
         console.log(response);
         if (response.ok) {
@@ -23,7 +23,7 @@ class Movies extends Component {
       .then((data) => {
         console.log(data);
         this.setState({
-          remoteMovies: data.Search || [],
+          remoteMovies1: data.Search || [],
         });
       })
       .catch((error) => {
@@ -38,8 +38,8 @@ class Movies extends Component {
   render() {
     console.log('Render method called');
     const movieGroups = [];
-    for (let i = 0; i < this.state.remoteMovies.length; i += 4) {
-      movieGroups.push(this.state.remoteMovies.slice(i, i + 4));
+    for (let i = 0; i < this.state.remoteMovies1.length; i += 4) {
+      movieGroups.push(this.state.remoteMovies1.slice(i, i + 4));
     }
 
     return (
@@ -67,4 +67,4 @@ class Movies extends Component {
   }
 }
 
-export default Movies;
+export default Movies1;
