@@ -9,6 +9,7 @@ import { Row} from 'react-bootstrap';
 import { Col } from 'react-bootstrap';
 import Movies2 from './components/MovieList3';
 import Footercustom from './components/Footer';
+import BasicExample from './components/Genres';
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
         <CustomNavbar/>
       </header>
       <main>
+        <BasicExample></BasicExample>
         <Container className='text-start mt-4 text-white' >
           <Movies/>
         </Container>

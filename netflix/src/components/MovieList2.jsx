@@ -38,8 +38,8 @@ class Movies1 extends Component {
   render() {
     console.log('Render method called');
     const movieGroups = [];
-    for (let i = 0; i < this.state.remoteMovies1.length; i += 4) {
-      movieGroups.push(this.state.remoteMovies1.slice(i, i + 4));
+    for (let i = 0; i < this.state.remoteMovies1.length; i += 5) {
+      movieGroups.push(this.state.remoteMovies1.slice(i, i + 5));
     }
 
     return (
@@ -48,9 +48,9 @@ class Movies1 extends Component {
         <Carousel>
           {movieGroups.map((group, index) => (
             <Carousel.Item key={index}>
-              <Row>
+              <Row className='justify-content-between'>
                 {group.map((movie, idx) => (
-                  <Col key={idx} xs={3} sm={3} md={3}>
+                  <Col key={idx} xs={2} sm={2} md={2}>
                     <img
                       className="d-block w-100"
                       src={movie.Poster}
